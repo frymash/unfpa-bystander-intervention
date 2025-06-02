@@ -93,7 +93,7 @@ sr1_callbacks = [
     sr1_care, sr1_see, sr1_feel, sr1_want, sr1_will
 ]
 
-# 5.2 Scenario 2: Bedroom
+# 5.2 Scenario 2: Locker room
 sr2_goal = 'sr2_goal'
 sr2_decision_making = 'sr2_decision_making'
 sr2_intervention = 'sr2_intervention'

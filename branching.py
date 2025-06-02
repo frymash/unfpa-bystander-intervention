@@ -19,6 +19,7 @@ async def violence_type_branching(query):
         print("Activated suicide risk scenario keyboard.")
         await query.edit_message_text(messages.sr_intro, reply_markup=keyboards.sr_keyboard())
         
+# TODO: replace strings with variables from callbacks.py
 async def pv_scenario_branching(query):
     # 1.1 Scenario 1: Older student bullies younger student in elementary school
     if query.data == 'Classroom':
@@ -56,7 +57,8 @@ async def sa_scenario_branching(query):
         await query.edit_message_text(messages.sa_scenario_2, reply_markup=keyboards.sa_s2_keyboard())
         
 async def sr_scenario_branching(query):
+    # 5.1 Scenario 1: 
     if query.data == 'Lunchroom':
         await query.edit_message_text(messages.sr_scenario_1, reply_markup=keyboards.sr_s1_keyboard())
-    elif query.data == 'Bedroom':
+    elif query.data == 'Locker room':
         await query.edit_message_text(messages.sr_scenario_2, reply_markup=keyboards.sr_s2_keyboard())

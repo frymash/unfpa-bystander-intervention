@@ -29,8 +29,8 @@ sa_keyboard = [sa_party, sa_school]
 
 # Suicide risk introduction options
 sr_cafeteria = 'Cafeteria'
-sr_bedroom = 'Bedroom'
-sr_keyboard = [sr_cafeteria, sr_bedroom]
+sr_lockerroom = 'Locker room'
+sr_keyboard = [sr_cafeteria, sr_lockerroom]
 
 # Bystander intervention options
 intervention_distract = 'Distract'
