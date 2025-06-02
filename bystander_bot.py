@@ -47,8 +47,10 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif query.data in options.sr_keyboard:
         print(f"Branching for suicide risk scenario: {query.data}")
         await branching.sr_scenario_branching(query)
+        
+    # TODO: Branching into intervention/5-point formula/5 core question explanations
 
-# === MAIN ===
+# --- Main ---
 
 def main():
     app = Application.builder().token(TOKEN).build()

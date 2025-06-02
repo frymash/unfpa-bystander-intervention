@@ -1,3 +1,4 @@
+import callbacks
 import options
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
@@ -11,7 +12,7 @@ def initial_keyboard():
         for scenario_id, cb_id in zip(options.initial_keyboard, scenario_callback_ids)
     ])
 
-def selector_keyboard(next_keyboard):
+def scenario_selector_keyboard(scenario_keyboard):
     """A generic keyboard that allows users to access different interventions or scenarios relevant to a given
     category of violence.
 
@@ -26,39 +27,73 @@ def selector_keyboard(next_keyboard):
         InlineKeyboardMarkup: keyboard with follow-up options
     """
     return InlineKeyboardMarkup([
-        [InlineKeyboardButton(option, callback_data=option)]
-        for option in next_keyboard
+        [InlineKeyboardButton(scenario, callback_data=scenario)]
+        for scenario in scenario_keyboard
     ])
 
 # Violence category keyboards
 
 def pv_keyboard():
-    return selector_keyboard(options.pv_keyboard)
+    return scenario_selector_keyboard(options.pv_keyboard)
 
 def sh_keyboard():
-    return selector_keyboard(options.sh_keyboard)
+    return scenario_selector_keyboard(options.sh_keyboard)
 
 def dv_keyboard():
-    return selector_keyboard(options.dv_keyboard)
+    return scenario_selector_keyboard(options.dv_keyboard)
 
 def sa_keyboard():
-    return selector_keyboard(options.sa_keyboard)   
+    return scenario_selector_keyboard(options.sa_keyboard)   
  
 def sr_keyboard():  
-    return selector_keyboard(options.sr_keyboard)
+    return scenario_selector_keyboard(options.sr_keyboard)
     
 
 # Intervention keyboards
-# TODO: create new keyboard for each intervention type in each scenarios
 # TODO: back function for every keyboard
-# currently, all intervention keyboards produce the same callback data
-# 1 keyboard for each scenario??
 
-def intervention_keyboard():
-    return selector_keyboard(options.intervention_keyboard)
+def generic_branching_keyboard(keyboard_type):
+    return lambda callbacks: \
+        InlineKeyboardMarkup([
+        [InlineKeyboardButton(option, callback_data=callback)]
+        for option, callback in zip(keyboard_type, callbacks)
+    ])
 
-def five_point_formula_keyboard():
-    return selector_keyboard(options.five_point_formula_keyboard)
+def intervention_keyboard(callbacks):
+    return generic_branching_keyboard(options.intervention_keyboard)(callbacks)
+    
+def five_point_formula_keyboard(callbacks):
+    return generic_branching_keyboard(options.five_point_formula_keyboard)(callbacks)
 
-def five_cq_keyboard():
-    return selector_keyboard(options.five_cq_keyboard)
+def five_cq_keyboard(callbacks):
+    return generic_branching_keyboard(options.five_cq_keyboard)(callbacks)
+
+def pv_s1_keyboard():
+    return intervention_keyboard(callbacks.pv1_callbacks)
+
+def pv_s2_keyboard():
+    return intervention_keyboard(callbacks.pv2_callbacks)
+
+def sh_s1_keyboard():
+    return intervention_keyboard(callbacks.sh1_callbacks)
+
+def sh_s2_keyboard():
+    return intervention_keyboard(callbacks.sh2_callbacks)
+
+def dv_s1_keyboard():
+    return five_cq_keyboard(callbacks.dv1_callbacks)
+
+def dv_s2_keyboard():
+    return intervention_keyboard(callbacks.dv2_callbacks)
+
+def sa_s1_keyboard():
+    return five_cq_keyboard(callbacks.sa1_callbacks)
+
+def sa_s2_keyboard():
+    return five_point_formula_keyboard(callbacks.sa2_callbacks)
+
+def sr_s1_keyboard():
+    return five_point_formula_keyboard(callbacks.sr1_callbacks)
+
+def sr_s2_keyboard():
+    return five_cq_keyboard(callbacks.sr2_callbacks)
