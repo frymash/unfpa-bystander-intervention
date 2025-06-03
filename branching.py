@@ -79,8 +79,8 @@ async def sa_scenario_branching(query):
     # 4.1 Scenario 1: Underage drinking at a party
     if query.data == 'Party':
         await query.edit_message_text(messages.sa_scenario_1, reply_markup=keyboards.sa_s1_keyboard())
-    # 4.2 Scenario 2: Drug addiction at school
-    elif query.data == 'School':
+    # 4.2 Scenario 2: Drug addiction at a friend's home
+    elif query.data == options.sa_friends_home:
         await query.edit_message_text(messages.sa_scenario_2, reply_markup=keyboards.sa_s2_keyboard())
 
      
@@ -225,16 +225,16 @@ async def sa1_intervention_branching(query):
         await intervention_end_redirect(query, messages.sa1_perspective_taking)
 
 async def sa2_intervention_branching(query):
-    if query.data == callbacks.sa2_distract:
-        await intervention_end_redirect(query, messages.sa2_distract)
-    elif query.data == callbacks.sa2_delegate:
-        await intervention_end_redirect(query, messages.sa2_delegate)
-    elif query.data == callbacks.sa2_document:
-        await intervention_end_redirect(query, messages.sa2_document)
-    elif query.data == callbacks.sa2_delay:
-        await intervention_end_redirect(query, messages.sa2_delay)
-    elif query.data == callbacks.sa2_direct:
-        await intervention_end_redirect(query, messages.sa2_direct)
+    if query.data == callbacks.sa2_care:
+        await intervention_end_redirect(query, messages.sa2_care)
+    elif query.data == callbacks.sa2_see:
+        await intervention_end_redirect(query, messages.sa2_see)
+    elif query.data == callbacks.sa2_feel:
+        await intervention_end_redirect(query, messages.sa2_feel)
+    elif query.data == callbacks.sa2_want:
+        await intervention_end_redirect(query, messages.sa2_want)
+    elif query.data == callbacks.sa2_will:
+        await intervention_end_redirect(query, messages.sa2_will)
 
 async def sr1_intervention_branching(query):
     if query.data == callbacks.sr1_care:
