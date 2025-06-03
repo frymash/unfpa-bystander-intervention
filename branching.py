@@ -86,7 +86,7 @@ async def sa_scenario_branching(query):
      
 async def sr_scenario_branching(query):
     # 5.1 Scenario 1: 
-    if query.data == 'Lunchroom':
+    if query.data == 'Cafeteria':
         await query.edit_message_text(messages.sr_scenario_1, reply_markup=keyboards.sr_s1_keyboard())
     elif query.data == 'Locker room':
         await query.edit_message_text(messages.sr_scenario_2, reply_markup=keyboards.sr_s2_keyboard())
