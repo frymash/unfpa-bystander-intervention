@@ -145,18 +145,18 @@ dv2_delay = "Delay: Talk to a trusted friend or family member about what to do. 
 dv2_direct = "Direct: If it feels safe, intervene directly. For example, enter the room and hug the victimized parent to create a distraction and offer support."
 
 # Substance Abuse Interventions - Scenario 2
-sa2_i_care = "I Care: “Hey Andrew, want to go for a walk? You're my close friend, and I want to talk about something important.”"
-sa2_i_see = "I See: “You've been smoking weed a lot and skipping class. You used to enjoy basketball and hanging out differently.”"
-sa2_i_feel = "I Feel: “I'm worried about you. I feel scared that stronger drugs might hurt you even more.”"
-sa2_i_want = "I Want: “I want the best for you. Let's talk or see the school psychologist together. I care about your future.”"
-sa2_i_will = "I Will: “I'll go with you to the psychologist if you want. I'm here to support you, whenever you're ready.”"
+sa2_care = "I Care: “Hey Andrew, want to go for a walk? You're my close friend, and I want to talk about something important.”"
+sa2_see = "I See: “You've been smoking weed a lot and skipping class. You used to enjoy basketball and hanging out differently.”"
+sa2_feel = "I Feel: “I'm worried about you. I feel scared that stronger drugs might hurt you even more.”"
+sa2_want = "I Want: “I want the best for you. Let's talk or see the school psychologist together. I care about your future.”"
+sa2_will = "I Will: “I'll go with you to the psychologist if you want. I'm here to support you, whenever you're ready.”"
 
 # Suicide Risk Interventions - Scenario 1
-sr1_i_care = "I Care: “Nina, want to sit with me at lunch? I've been thinking about you and care about how you're doing.”"
-sr1_i_see = "I See: “You've been distant and I saw sharp objects in your bag. Are you thinking about hurting yourself?”"
-sr1_i_feel = "I Feel: “I'm scared for you and worried something bad might happen. How are you really feeling?”"
-sr1_i_want = "I Want: “I want to help. Let's talk to someone together. You don't have to face this alone.”"
-sr1_i_will = "I Will: “I can help you set up therapy and go with you. I'll stay with you. You're not alone.”"
+sr1_care = "I Care: “Nina, want to sit with me at lunch? I've been thinking about you and care about how you're doing.”"
+sr1_see = "I See: “You've been distant and I saw sharp objects in your bag. Are you thinking about hurting yourself?”"
+sr1_feel = "I Feel: “I'm scared for you and worried something bad might happen. How are you really feeling?”"
+sr1_want = "I Want: “I want to help. Let's talk to someone together. You don't have to face this alone.”"
+sr1_will = "I Will: “I can help you set up therapy and go with you. I'll stay with you. You're not alone.”"
 
 # Suicide Risk Tnterventions - Scenario 2
 sr2_goal = "Goal: Support your friend and involve professionals who can help."
