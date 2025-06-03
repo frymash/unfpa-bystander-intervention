@@ -146,12 +146,15 @@ dv2_direct = "Direct: If it feels safe, intervene directly. For example, enter t
 
 # Substance Abuse - Scenario 1
 sa1_goal = "Goal: Understand why your friend is drinking despite the law, and figure out how to support or help her."
-sa1_decision_making = (
-    "Notice: You see your underage friend order an alcoholic drink at a party—this is illegal and risky.\n\n"
-    "Interpret: Underage drinking can have serious consequences, so you need to act.\n\n"
-    "Assume responsibility: Think about talking to her privately, alerting the waiter, or getting someone else's help.\n\n"
-    "Skills: You might not be able to force her to stop, but you can offer support and suggest a safer, alcohol-free option."
-)
+sa1_decision_making = """
+Notice: You see your underage friend order an alcoholic drink at a party—this is illegal and risky.
+
+Interpret: Underage drinking can have serious consequences, so you need to act.
+
+Assume responsibility: Think about talking to her privately, alerting the waiter, or getting someone else's help.
+
+Skills: You might not be able to force her to stop, but you can offer support and suggest a safer, alcohol-free option.
+"""
 sa1_intervention = "Implement the Help - Step UP!: Approach your friend, express concern, and offer to help her make a safer choice. If needed, involve a trusted adult."
 sa1_options = "Options: Ask if she's okay, talk in private, notify the waiter, or suggest an alcohol-free option."
 sa1_cost_benefits = "Costs & Rewards: Intervening helps keep her safe and shows you care. Not acting could lead to harm or legal trouble."
