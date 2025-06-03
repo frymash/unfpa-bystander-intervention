@@ -104,3 +104,11 @@ sr2_callbacks = [
     sr2_goal, sr2_decision_making, sr2_intervention, 
     sr2_options, sr2_cost_benefits, sr2_perspective_taking
 ]
+
+# All callbacks for branching scenarios
+pv_callbacks = pv1_callbacks + pv2_callbacks
+sh_callbacks = sh1_callbacks + sh2_callbacks
+dv_callbacks = dv1_callbacks + dv2_callbacks
+sa_callbacks = sa1_callbacks + sa2_callbacks
+sr_callbacks = sr1_callbacks + sr2_callbacks
+scenario_actions = pv_callbacks + sh_callbacks + dv_callbacks + sa_callbacks + sr_callbacks

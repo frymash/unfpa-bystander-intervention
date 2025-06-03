@@ -1,4 +1,5 @@
 import branching
+import callbacks
 import keyboards
 import messages
 import options
@@ -19,6 +20,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # TODO: Implement the scenario selection logic
+# TODO: Condense scenario selection logic into a single function
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     print(f"Received callback query: {query.data} at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -28,27 +30,17 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         print(f"Branching for violence type: {query.data}")
         await branching.violence_type_branching(query)
 
-    elif query.data in options.pv_keyboard:
-        print(f"Branching for peer violence scenario: {query.data}")
-        await branching.pv_scenario_branching(query)
-
-    elif query.data in options.sh_keyboard:
-        print(f"Branching for sexual harassment scenario: {query.data}")
-        await branching.sh_scenario_branching(query)
-
-    elif query.data in options.dv_keyboard:
-        print(f"Branching for domestic violence scenario: {query.data}")
-        await branching.dv_scenario_branching(query)
-        
-    elif query.data in options.sa_keyboard:
-        print(f"Branching for substance abuse scenario: {query.data}")
-        await branching.sa_scenario_branching(query)
-        
-    elif query.data in options.sr_keyboard:
-        print(f"Branching for suicide risk scenario: {query.data}")
-        await branching.sr_scenario_branching(query)
+    elif query.data in options.scenario_list:
+        print(f"Branching for scenario: {query.data}")
+        # Handle branching into specific scenarios
+        await branching.handle_scenario_branching(query)
         
     # TODO: Branching into intervention/5-point formula/5 core question explanations
+    elif query.data in callbacks.scenario_actions:
+        print(f"Branching for intervention: {query.data}")
+        # Handle branching into interventions
+        await branching.handle_intervention_branching(query)
+
 
 # --- Main ---
 

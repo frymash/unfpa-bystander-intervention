@@ -11,6 +11,10 @@ def initial_keyboard():
         [InlineKeyboardButton(scenario_id, callback_data=cb_id)]
         for scenario_id, cb_id in zip(options.initial_keyboard, scenario_callback_ids)
     ])
+    
+# TODO: Return to initial keyboard function
+def return_to_initial_keyboard():
+    pass
 
 def scenario_selector_keyboard(scenario_keyboard):
     """A generic keyboard that allows users to access different interventions or scenarios relevant to a given

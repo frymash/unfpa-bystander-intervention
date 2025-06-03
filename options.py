@@ -32,6 +32,13 @@ sr_cafeteria = 'Cafeteria'
 sr_lockerroom = 'Locker room'
 sr_keyboard = [sr_cafeteria, sr_lockerroom]
 
+# Unified scenario list
+scenario_list = pv_keyboard \
+    + sh_keyboard \
+    + dv_keyboard \
+    + sa_keyboard \
+    + sr_keyboard
+
 # Bystander intervention options
 intervention_distract = 'Distract'
 intervention_delegate = 'Delegate'
