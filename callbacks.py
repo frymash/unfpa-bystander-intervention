@@ -75,7 +75,7 @@ sa1_callbacks = [
 ]
 
 
-# 4.2 Scenario 2: Drug addiction at school
+# 4.2 Scenario 2: Drug addiction at a friend's home
 sa2_care = 'sa2_care'
 sa2_see = 'sa2_see'
 sa2_feel = 'sa2_feel'

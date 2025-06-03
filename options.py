@@ -24,8 +24,8 @@ dv_keyboard = [dv_apartment, dv_livingroom]
 
 # Substance abuse introduction options
 sa_party = 'Party'
-sa_school = 'School'
-sa_keyboard = [sa_party, sa_school]
+sa_friends_home = "Friend's home"
+sa_keyboard = [sa_party, sa_friends_home]
 
 # Suicide risk introduction options
 sr_cafeteria = 'Cafeteria'
