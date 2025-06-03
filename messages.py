@@ -144,6 +144,19 @@ dv2_document = "Document: Use your or their phone to record the situation if saf
 dv2_delay = "Delay: Talk to a trusted friend or family member about what to do. Ask them to help you learn how to respond."
 dv2_direct = "Direct: If it feels safe, intervene directly. For example, enter the room and hug the victimized parent to create a distraction and offer support."
 
+# Substance Abuse - Scenario 1
+sa1_goal = "Goal: Understand why your friend is drinking despite the law, and figure out how to support or help her."
+sa1_decision_making = (
+    "Notice: You see your underage friend order an alcoholic drink at a party—this is illegal and risky.\n\n"
+    "Interpret: Underage drinking can have serious consequences, so you need to act.\n\n"
+    "Assume responsibility: Think about talking to her privately, alerting the waiter, or getting someone else's help.\n\n"
+    "Skills: You might not be able to force her to stop, but you can offer support and suggest a safer, alcohol-free option."
+)
+sa1_intervention = "Implement the Help - Step UP!: Approach your friend, express concern, and offer to help her make a safer choice. If needed, involve a trusted adult."
+sa1_options = "Options: Ask if she's okay, talk in private, notify the waiter, or suggest an alcohol-free option."
+sa1_cost_benefits = "Costs & Rewards: Intervening helps keep her safe and shows you care. Not acting could lead to harm or legal trouble."
+sa1_perspective_taking = "Perspective-taking: How would you feel if you were in her shoes? What would you want someone to do for you?"
+
 # Substance Abuse Interventions - Scenario 2
 sa2_care = "I Care: “Hey Andrew, want to go for a walk? You're my close friend, and I want to talk about something important.”"
 sa2_see = "I See: “You've been smoking weed a lot and skipping class. You used to enjoy basketball and hanging out differently.”"
