@@ -14,7 +14,9 @@ def initial_keyboard():
     
 # TODO: Return to initial keyboard function
 def return_to_initial_keyboard():
-    pass
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("Return to the start", callback_data=callbacks.start)]
+    ])
 
 def scenario_selector_keyboard(scenario_keyboard):
     """A generic keyboard that allows users to access different interventions or scenarios relevant to a given

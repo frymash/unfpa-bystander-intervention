@@ -25,8 +25,11 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     print(f"Received callback query: {query.data} at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     await query.answer()
+    
+    if query.data == callbacks.start:
+        await query.edit_message_text(messages.welcome, reply_markup=keyboards.initial_keyboard())
 
-    if query.data in options.initial_keyboard:
+    elif query.data in options.initial_keyboard:
         print(f"Branching for violence type: {query.data}")
         await branching.violence_type_branching(query)
 

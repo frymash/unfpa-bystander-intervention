@@ -133,129 +133,131 @@ async def handle_sr_intervention(query):
     elif query.data in callbacks.sr2_callbacks:
         await sr2_intervention_branching(query)
         
+def intervention_end_redirect(query, message):
+    return query.edit_message_text(message, reply_markup=keyboards.return_to_initial_keyboard())
+        
 async def pv1_intervention_branching(query):
     if query.data == callbacks.pv1_distract:
-        await query.edit_message_text(messages.pv1_distract)
+        await intervention_end_redirect(query, messages.pv1_distract)
     elif query.data == callbacks.pv1_delegate:
-        await query.edit_message_text(messages.pv1_delegate)
+        await intervention_end_redirect(query, messages.pv1_delegate)
     elif query.data == callbacks.pv1_document:
-        await query.edit_message_text(messages.pv1_document)
+        await intervention_end_redirect(query, messages.pv1_document)
     elif query.data == callbacks.pv1_delay:
-        await query.edit_message_text(messages.pv1_delay)
+        await intervention_end_redirect(query, messages.pv1_delay)
     elif query.data == callbacks.pv1_direct:
-        await query.edit_message_text(messages.pv1_direct)
-        
+        await intervention_end_redirect(query, messages.pv1_direct)
+
 async def pv2_intervention_branching(query):
     if query.data == callbacks.pv2_distract:
-        await query.edit_message_text(messages.pv2_distract)
+        await intervention_end_redirect(query, messages.pv2_distract)
     elif query.data == callbacks.pv2_delegate:
-        await query.edit_message_text(messages.pv2_delegate)
+        await intervention_end_redirect(query, messages.pv2_delegate)
     elif query.data == callbacks.pv2_document:
-        await query.edit_message_text(messages.pv2_document)
+        await intervention_end_redirect(query, messages.pv2_document)
     elif query.data == callbacks.pv2_delay:
-        await query.edit_message_text(messages.pv2_delay)
+        await intervention_end_redirect(query, messages.pv2_delay)
     elif query.data == callbacks.pv2_direct:
-        await query.edit_message_text(messages.pv2_direct)
+        await intervention_end_redirect(query, messages.pv2_direct)
 
 async def sh1_intervention_branching(query):
     if query.data == callbacks.sh1_distract:
-        await query.edit_message_text(messages.sh1_distract)
+        await intervention_end_redirect(query, messages.sh1_distract)
     elif query.data == callbacks.sh1_delegate:
-        await query.edit_message_text(messages.sh1_delegate)
+        await intervention_end_redirect(query, messages.sh1_delegate)
     elif query.data == callbacks.sh1_document:
-        await query.edit_message_text(messages.sh1_document)
+        await intervention_end_redirect(query, messages.sh1_document)
     elif query.data == callbacks.sh1_delay:
-        await query.edit_message_text(messages.sh1_delay)
+        await intervention_end_redirect(query, messages.sh1_delay)
     elif query.data == callbacks.sh1_direct:
-        await query.edit_message_text(messages.sh1_direct)
+        await intervention_end_redirect(query, messages.sh1_direct)
 
 async def sh2_intervention_branching(query):
     if query.data == callbacks.sh2_distract:
-        await query.edit_message_text(messages.sh2_distract)
+        await intervention_end_redirect(query, messages.sh2_distract)
     elif query.data == callbacks.sh2_delegate:
-        await query.edit_message_text(messages.sh2_delegate)
+        await intervention_end_redirect(query, messages.sh2_delegate)
     elif query.data == callbacks.sh2_document:
-        await query.edit_message_text(messages.sh2_document)
+        await intervention_end_redirect(query, messages.sh2_document)
     elif query.data == callbacks.sh2_delay:
-        await query.edit_message_text(messages.sh2_delay)
+        await intervention_end_redirect(query, messages.sh2_delay)
     elif query.data == callbacks.sh2_direct:
-        await query.edit_message_text(messages.sh2_direct)
+        await intervention_end_redirect(query, messages.sh2_direct)
 
 async def dv1_intervention_branching(query):
     if query.data == callbacks.dv1_goal:
-        await query.edit_message_text(messages.dv1_goal)
+        await intervention_end_redirect(query, messages.dv1_goal)
     elif query.data == callbacks.dv1_decision_making:
-        await query.edit_message_text(messages.dv1_decision_making)
+        await intervention_end_redirect(query, messages.dv1_decision_making)
     elif query.data == callbacks.dv1_intervention:
-        await query.edit_message_text(messages.dv1_intervention)
+        await intervention_end_redirect(query, messages.dv1_intervention)
     elif query.data == callbacks.dv1_options:
-        await query.edit_message_text(messages.dv1_options)
+        await intervention_end_redirect(query, messages.dv1_options)
     elif query.data == callbacks.dv1_cost_benefits:
-        await query.edit_message_text(messages.dv1_cost_benefits)
+        await intervention_end_redirect(query, messages.dv1_cost_benefits)
     elif query.data == callbacks.dv1_perspective_taking:
-        await query.edit_message_text(messages.dv1_perspective_taking)
+        await intervention_end_redirect(query, messages.dv1_perspective_taking)
 
 async def dv2_intervention_branching(query):
     if query.data == callbacks.dv2_distract:
-        await query.edit_message_text(messages.dv2_distract)
+        await intervention_end_redirect(query, messages.dv2_distract)
     elif query.data == callbacks.dv2_delegate:
-        await query.edit_message_text(messages.dv2_delegate)
+        await intervention_end_redirect(query, messages.dv2_delegate)
     elif query.data == callbacks.dv2_document:
-        await query.edit_message_text(messages.dv2_document)
+        await intervention_end_redirect(query, messages.dv2_document)
     elif query.data == callbacks.dv2_delay:
-        await query.edit_message_text(messages.dv2_delay)
+        await intervention_end_redirect(query, messages.dv2_delay)
     elif query.data == callbacks.dv2_direct:
-        await query.edit_message_text(messages.dv2_direct)
+        await intervention_end_redirect(query, messages.dv2_direct)
 
 async def sa1_intervention_branching(query):
     if query.data == callbacks.sa1_goal:
-        await query.edit_message_text(messages.sa1_goal)
+        await intervention_end_redirect(query, messages.sa1_goal)
     elif query.data == callbacks.sa1_decision_making:
-        await query.edit_message_text(messages.sa1_decision_making)
+        await intervention_end_redirect(query, messages.sa1_decision_making)
     elif query.data == callbacks.sa1_intervention:
-        await query.edit_message_text(messages.sa1_intervention)
+        await intervention_end_redirect(query, messages.sa1_intervention)
     elif query.data == callbacks.sa1_options:
-        await query.edit_message_text(messages.sa1_options)
+        await intervention_end_redirect(query, messages.sa1_options)
     elif query.data == callbacks.sa1_cost_benefits:
-        await query.edit_message_text(messages.sa1_cost_benefits)
+        await intervention_end_redirect(query, messages.sa1_cost_benefits)
     elif query.data == callbacks.sa1_perspective_taking:
-        await query.edit_message_text(messages.sa1_perspective_taking)
+        await intervention_end_redirect(query, messages.sa1_perspective_taking)
 
 async def sa2_intervention_branching(query):
     if query.data == callbacks.sa2_distract:
-        await query.edit_message_text(messages.sa2_distract)
+        await intervention_end_redirect(query, messages.sa2_distract)
     elif query.data == callbacks.sa2_delegate:
-        await query.edit_message_text(messages.sa2_delegate)
+        await intervention_end_redirect(query, messages.sa2_delegate)
     elif query.data == callbacks.sa2_document:
-        await query.edit_message_text(messages.sa2_document)
+        await intervention_end_redirect(query, messages.sa2_document)
     elif query.data == callbacks.sa2_delay:
-        await query.edit_message_text(messages.sa2_delay)
+        await intervention_end_redirect(query, messages.sa2_delay)
     elif query.data == callbacks.sa2_direct:
-        await query.edit_message_text(messages.sa2_direct)
+        await intervention_end_redirect(query, messages.sa2_direct)
 
 async def sr1_intervention_branching(query):
     if query.data == callbacks.sr1_care:
-        await query.edit_message_text(messages.sr1_care)
+        await intervention_end_redirect(query, messages.sr1_care)
     elif query.data == callbacks.sr1_see:
-        await query.edit_message_text(messages.sr1_see)
+        await intervention_end_redirect(query, messages.sr1_see)
     elif query.data == callbacks.sr1_feel:
-        await query.edit_message_text(messages.sr1_feel)
+        await intervention_end_redirect(query, messages.sr1_feel)
     elif query.data == callbacks.sr1_want:
-        await query.edit_message_text(messages.sr1_want)
+        await intervention_end_redirect(query, messages.sr1_want)
     elif query.data == callbacks.sr1_will:
-        await query.edit_message_text(messages.sr1_will)
+        await intervention_end_redirect(query, messages.sr1_will)
 
 async def sr2_intervention_branching(query):
     if query.data == callbacks.sr2_goal:
-        await query.edit_message_text(messages.sr2_goal)
+        await intervention_end_redirect(query, messages.sr2_goal)
     elif query.data == callbacks.sr2_decision_making:
-        await query.edit_message_text(messages.sr2_decision_making)
+        await intervention_end_redirect(query, messages.sr2_decision_making)
     elif query.data == callbacks.sr2_intervention:
-        await query.edit_message_text(messages.sr2_intervention)
+        await intervention_end_redirect(query, messages.sr2_intervention)
     elif query.data == callbacks.sr2_options:
-        await query.edit_message_text(messages.sr2_options)
+        await intervention_end_redirect(query, messages.sr2_options)
     elif query.data == callbacks.sr2_cost_benefits:
-        await query.edit_message_text(messages.sr2_cost_benefits)
+        await intervention_end_redirect(query, messages.sr2_cost_benefits)
     elif query.data == callbacks.sr2_perspective_taking:
-        await query.edit_message_text(messages.sr2_perspective_taking)
-        
+        await intervention_end_redirect(query, messages.sr2_perspective_taking)

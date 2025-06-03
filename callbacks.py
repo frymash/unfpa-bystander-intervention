@@ -1,3 +1,5 @@
+start = 'start'
+
 # 1.1 Scenario 1: Older student bullies younger student in elementary school
 pv1_distract = 'pv1_distract'
 pv1_delegate = 'pv1_delegate'
